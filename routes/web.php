@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// Controller Path
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
@@ -21,9 +22,9 @@ Route::view('/home','home');
 
 // or
 
-// Route::get('/about/{name}',function($name){
-//     return view('about',['name'=>$name]);
-// });
+Route::get('/about/{name}',function($name){
+    return view('about',['name'=>$name]);
+});
 
 // Route::redirect('/home','/');
 
@@ -31,3 +32,4 @@ Route::view('/home','home');
 Route::get('user',[UserController::class,'getUser']);
 Route::get('about',[UserController::class,'aboutUser']);
 Route::get('user/{name}',[UserController::class,'getUserName']);
+Route::get('admin',[UserController::class,'adminlogin']);

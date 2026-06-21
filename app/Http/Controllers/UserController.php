@@ -8,7 +8,8 @@ class UserController extends Controller
 {
     //
     function getUser(){
-        return "Niharika Bansal";
+        // return "Niharika Bansal";
+        return view('user');
     }
 
     function aboutUser(){
@@ -16,6 +17,11 @@ class UserController extends Controller
     }
 
     function getUserName($name){
-        return "Hello! This is ". $name;
+        // echo "Hello! This is ". $name;
+        return view('getuser',['name'=>$name]);
+    }
+
+    function adminlogin(){
+        return view('admin.login');
     }
 }
