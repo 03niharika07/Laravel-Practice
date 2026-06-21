@@ -32,4 +32,7 @@ Route::get('/about/{name}',function($name){
 Route::get('user',[UserController::class,'getUser']);
 Route::get('about',[UserController::class,'aboutUser']);
 Route::get('user/{name}',[UserController::class,'getUserName']);
+
 Route::get('admin',[UserController::class,'adminlogin']);
+// or
+// Route::view('admin','admin.login');
