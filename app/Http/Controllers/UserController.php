@@ -31,4 +31,10 @@ class UserController extends Controller
         }
         
     }
+
+    function userhome(){
+        $name = "Niharika";
+        $users = ['Niharika','Neha','Sam'];
+        return view('home',['name'=>$name,'users'=>$users]);
+    }
 }
